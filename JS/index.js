@@ -1,4 +1,17 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Set active nav link based on current page
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    
+    navLinks.forEach(link => {
+        const linkPage = link.getAttribute('href');
+        if (linkPage === currentPage) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+
     // Tab navigation
     const tabs = document.querySelectorAll('.nav-link');
     const prevBtn = document.getElementById('prevTab');

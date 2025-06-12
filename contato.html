@@ -12,7 +12,11 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid container">
-                <a class="navbar-brand" href="#">Igorjean</a>
+                <!-- Logo adicionada aqui -->
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="img/logo2.png"alt="Logo" class="navbar-logo">
+                    <span class="ms-2">Igorjean</span>
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -28,7 +32,7 @@
                             <a class="nav-link" href="sobre.html">Sobre</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="contato.html">contato</a>
+                            <a class="nav-link active" aria-current="page" href="contato.html">Contato</a>
                         </li>
                     </ul>
                 </div>
@@ -37,176 +41,48 @@
     </header>
 
     <main>
-        <div class="container py-5">
-            <h2 class="text-center mb-4">Entre em Contato</h2>
-            <div class="card shadow-sm">
-                <div class="card-body">
-                    <ul class="nav nav-tabs" id="contactTabs" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="personal-tab" data-bs-toggle="tab" data-bs-target="#personal" type="button" role="tab" aria-controls="personal" aria-selected="true">
-                                <i class="fas fa-user me-2"></i>Informações Pessoais
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">
-                                <i class="fas fa-phone me-2"></i>Contato
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="address-tab" data-bs-toggle="tab" data-bs-target="#address" type="button" role="tab" aria-controls="address" aria-selected="false">
-                                <i class="fas fa-map-marker-alt me-2"></i>Endereço
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="professional-tab" data-bs-toggle="tab" data-bs-target="#professional" type="button" role="tab" aria-controls="professional" aria-selected="false">
-                                <i class="fas fa-briefcase me-2"></i>Profissional
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="message-tab" data-bs-toggle="tab" data-bs-target="#message" type="button" role="tab" aria-controls="message" aria-selected="false">
-                                <i class="fas fa-envelope me-2"></i>Mensagem
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="preferences-tab" data-bs-toggle="tab" data-bs-target="#preferences" type="button" role="tab" aria-controls="preferences" aria-selected="false">
-                                <i class="fas fa-cog me-2"></i>Preferências
-                            </button>
-                        </li>
-                    </ul>
-                    <div class="tab-content p-4" id="contactTabsContent">
-                        <div class="tab-pane fade show active" id="personal" role="tabpanel" aria-labelledby="personal-tab">
-                            <form>
-                                <div class="row">
-                                    <div class="col-md-6 mb-3">
-                                        <label for="firstName" class="form-label">Nome</label>
-                                        <input type="text" class="form-control" id="firstName" required>
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label for="lastName" class="form-label">Sobrenome</label>
-                                        <input type="text" class="form-control" id="lastName" required>
-                                    </div>
+        <div class="container py-5 d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+            <div class="col-md-6">
+                <div class="mb-4">
+                    <h2 class="fw-semibold" style="color: #333; text-align: left;">Entre em Contato</h2>
+                    <hr style="border-top: 2px solid #e0e0e0; width: 60px; margin-left: 0;">
+                </div>
+                <div class="card border-0 shadow-sm" style="background: #f8f9fa; border-radius: 18px;">
+                    <div class="card-body p-4">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <label for="name" class="form-label">Nome</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Digite seu nome" required style="border-radius: 8px;">
                                 </div>
-                                <div class="mb-3">
-                                    <label for="cpf" class="form-label">CPF</label>
-                                    <input type="text" class="form-control" id="cpf" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="birthDate" class="form-label">Data de Nascimento</label>
-                                    <input type="date" class="form-control" id="birthDate" required>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                            <form>
-                                <div class="mb-3">
+                                <div class="col-md-6 mb-4">
                                     <label for="email" class="form-label">E-mail</label>
-                                    <input type="email" class="form-control" id="email" required>
+                                    <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail" required style="border-radius: 8px;">
                                 </div>
-                                <div class="mb-3">
+                                <div class="col-md-6 mb-4">
                                     <label for="phone" class="form-label">Telefone</label>
-                                    <input type="tel" class="form-control" id="phone" required>
+                                    <input type="tel" class="form-control" id="phone" placeholder="(99) 99999-9999" required style="border-radius: 8px;">
                                 </div>
-                                <div class="mb-3">
-                                    <label for="whatsapp" class="form-label">WhatsApp</label>
-                                    <input type="tel" class="form-control" id="whatsapp">
-                                </div>
-                            </form>
-                        </div>
-                        <div class="tab-pane fade" id="address" role="tabpanel" aria-labelledby="address-tab">
-                            <form>
-                                <div class="mb-3">
-                                    <label for="cep" class="form-label">CEP</label>
-                                    <input type="text" class="form-control" id="cep" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="street" class="form-label">Rua</label>
-                                    <input type="text" class="form-control" id="street" required>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6 mb-3">
-                                        <label for="number" class="form-label">Número</label>
-                                        <input type="text" class="form-control" id="number" required>
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label for="complement" class="form-label">Complemento</label>
-                                        <input type="text" class="form-control" id="complement">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6 mb-3">
-                                        <label for="city" class="form-label">Cidade</label>
-                                        <input type="text" class="form-control" id="city" required>
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label for="state" class="form-label">Estado</label>
-                                        <select class="form-select" id="state" required>
-                                            <option value="">Selecione...</option>
-                                            <!-- Add all Brazilian states here -->
-                                        </select>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="tab-pane fade" id="professional" role="tabpanel" aria-labelledby="professional-tab">
-                            <form>
-                                <div class="mb-3">
-                                    <label for="occupation" class="form-label">Profissão</label>
-                                    <input type="text" class="form-control" id="occupation" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="company" class="form-label">Empresa</label>
-                                    <input type="text" class="form-control" id="company">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="position" class="form-label">Cargo</label>
-                                    <input type="text" class="form-control" id="position">
-                                </div>
-                            </form>
-                        </div>
-                        <div class="tab-pane fade" id="message" role="tabpanel" aria-labelledby="message-tab">
-                            <form>
-                                <div class="mb-3">
+                                <div class="col-md-6 mb-4">
                                     <label for="subject" class="form-label">Assunto</label>
-                                    <input type="text" class="form-control" id="subject" required>
+                                    <input type="text" class="form-control" id="subject" placeholder="Assunto da mensagem" required style="border-radius: 8px;">
                                 </div>
-                                <div class="mb-3">
-                                    <label for="messageText" class="form-label">Mensagem</label>
-                                    <textarea class="form-control" id="messageText" rows="5" required></textarea>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="tab-pane fade" id="preferences" role="tabpanel" aria-labelledby="preferences-tab">
-                            <form>
-                                <div class="mb-3">
-                                    <label class="form-label">Preferência de Contato</label>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="prefEmail">
-                                        <label class="form-check-label" for="prefEmail">E-mail</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="prefPhone">
-                                        <label class="form-check-label" for="prefPhone">Telefone</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="prefWhatsapp">
-                                        <label class="form-check-label" for="prefWhatsapp">WhatsApp</label>
-                                    </div>
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label">Melhor Horário para Contato</label>
-                                    <select class="form-select" id="bestTime">
-                                        <option value="">Selecione...</option>
-                                        <option value="morning">Manhã (8h-12h)</option>
-                                        <option value="afternoon">Tarde (13h-17h)</option>
-                                        <option value="evening">Noite (18h-22h)</option>
-                                    </select>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-between mt-4">
-                        <button type="button" class="btn btn-secondary" id="prevTab">Anterior</button>
-                        <button type="button" class="btn btn-primary" id="nextTab">Próximo</button>
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="form-label">Mensagem</label>
+                                <textarea class="form-control" id="message" rows="4" placeholder="Digite sua mensagem" required style="border-radius: 8px;"></textarea>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label">Preferência de Contato</label>
+                                <select class="form-select" id="contactPreference" required style="border-radius: 8px;">
+                                    <option value="">Selecione...</option>
+                                    <option value="email">E-mail</option>
+                                    <option value="phone">Telefone</option>
+                                    <option value="whatsapp">WhatsApp</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn" style="background: #333; color: #fff; border-radius: 8px; width: 100%; font-weight: 500; letter-spacing: 1px;">Enviar</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -216,10 +92,10 @@
     <footer class="footer">
         <div class="container">
             <div class="social-links">
-                <a href="https://instagram.com/seu_instagram" target="_blank" class="social-link">
+                <a href="https://www.instagram.com/igorsoglia.engenharia?igsh=NTd0Y3FieGI3MmFt&utm_source=qr" target="_blank" class="social-link">
                     <i class="fab fa-instagram"></i>
                 </a>
-                <a href="https://wa.me/seu_numero" target="_blank" class="social-link">
+                <a href="https://wa.me/5511999999999" target="_blank" class="social-link">
                     <i class="fab fa-whatsapp"></i>
                 </a>
                 <a href="https://facebook.com/seu_facebook" target="_blank" class="social-link">
