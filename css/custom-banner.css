@@ -1,0 +1,83 @@
+/* Banner personalizado acima do section */
+.custom-banner-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 0 30px 120px;
+    max-height: 350px;
+    overflow: visible;
+    background: linear-gradient(to right, var(--taupe-brown) 50%, var(--taupe) 50%);
+}
+.custom-banner-img-wrapper {
+    /* Removido para voltar ao layout original */
+}
+.custom-banner-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+}
+.custom-banner-text {
+    position: static;
+    background: none;
+    color: #222;
+    padding: 0;
+    margin-top: 10px;
+    text-align: right;
+    font-size: 1.2rem;
+    max-width: 600px;
+    width: 100%;
+    float: none;
+    margin-left: auto;
+    margin-right: 180px;
+}
+.custom-banner-text-box {
+    position: absolute;
+    top: auto;
+    bottom: -90px; /* faz a caixa sair parcialmente para baixo da imagem */
+    left: 40px;
+    background: #fff !important; /* branco sólido */
+    color: #333;
+    padding: 32px 28px;
+    z-index: 3;
+    font-size: 2.2rem;
+    font-weight: 600;
+    max-width: 300px;
+    width: 300px;
+    height: 140px;
+    z-index: 2;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-left: 40px;
+    padding-right: 20px;
+}
+.texto-direita-banner {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: 12px;
+    font-size: 1.1rem;
+    color: #333;
+    padding-right: 24px;
+    /* Novo: move o texto mais para a esquerda, perto da imagem */
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: 120px;
+}
+
+/* Removido o estilo do .btn-banner pois o botão foi retirado do banner */
+
+section {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background: var(--cinza-claro) !important;
+    border-radius: 0 !important;
+}
+section.about-sction2 {
+    background: none !important;
+}

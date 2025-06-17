@@ -11,6 +11,7 @@
                 <i class="fab fa-facebook"></i>
             </a>
         </div>
+        <span class="footer-address">Centro, Cidade/UF</span>
         <p class="copyright">© 2024 Igor Jean. Todos os direitos reservados.</p>
     </div>
 </footer>

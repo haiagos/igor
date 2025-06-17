@@ -1,5 +1,6 @@
 <?php include 'partials/header.php'; ?>
 <main>
+ 
     <!-- Conteúdo da página de projetos -->
 </main>
 <?php include 'partials/footer.php'; ?>

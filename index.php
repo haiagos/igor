@@ -1,10 +1,12 @@
 <?php include 'partials/header.php'; ?>
+<link rel="stylesheet" href="css/custom-banner.css">
 <main>
+    
     <div id="carouselExample" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="false">
         <div class="carousel-inner">
             <div class="carousel-item active position-relative">
                 <img src="img/banner.jpeg" class="d-block w-100" alt="Banner 1">
-                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center" style="top: 0; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.3); min-height: 100%;">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center" style="top: 0; bottom: 0; left: 0; right: 0; min-height: 100%;">
                     <img src="img/logo2.png" alt="Logo" style="width: 120px; height: auto; margin-bottom: 20px;">
                     <h2 class="text-white mb-3">Bem-vindo ao Meu Portfólio</h2>
                     <p class="text-white mb-4">Desenvolvedor Web & Soluções Digitais</p>
@@ -13,7 +15,7 @@
             </div>
             <div class="carousel-item position-relative">
                 <img src="img/WhatsApp Image 2025-06-04 at 19.27.41 (1).jpeg" class="d-block w-100" alt="Banner 2">
-                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center" style="top: 0; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.3); min-height: 100%;">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center" style="top: 0; bottom: 0; left: 0; right: 0; min-height: 100%;">
                     <img src="img/logo2.png" alt="Logo" style="width: 120px; height: auto; margin-bottom: 20px;">
                     <h2 class="text-white mb-3">Bem-vindo ao Meu Portfólio</h2>
                     <p class="text-white mb-4">Desenvolvedor Web & Soluções Digitais</p>
@@ -22,7 +24,7 @@
             </div>
             <div class="carousel-item position-relative">
                 <img src="img/WhatsApp Image 2025-06-04 at 19.27.41 (2).jpeg" class="d-block w-100" alt="Banner 3">
-                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center" style="top: 0; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.3); min-height: 100%;">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center" style="top: 0; bottom: 0; left: 0; right: 0; min-height: 100%;">
                     <img src="img/logo2.png" alt="Logo" style="width: 120px; height: auto; margin-bottom: 20px;">
                     <h2 class="text-white mb-3">Bem-vindo ao Meu Portfólio</h2>
                     <p class="text-white mb-4">Desenvolvedor Web & Soluções Digitais</p>
@@ -39,7 +41,27 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
+    
+    
 </main>
+"<section class="about-sction2">
+    <div class="custom-banner-container">
+        <div class="custom-banner-img-wrapper">
+            <img src="img/banner.jpeg" alt="Banner Personalizado" class="custom-banner-img">
+        </div>
+        <div class="custom-banner-text-box">
+            Bem-vindo ao<br>
+            Nosso Site
+        </div>""
+    </div>
+    <div class="texto-direita-banner">
+         Para nós, arquitetura vai além de construir
+ estruturas. É a junção harmoniosa de
+ Arquitetura, Engenharia, Arte e Design, tudo
+ isso combinado com uma interpretação
+ profunda das necessidades de cada cliente.
+    </div>
+</section>"
 <section class="about-section">
     <div class="container">
         <div class="about-content">
