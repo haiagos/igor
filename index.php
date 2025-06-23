@@ -44,7 +44,7 @@
     
     
 </main>
-"<section class="about-sction2">
+<section class="about-section2">
     <div class="custom-banner-container">
         <div class="custom-banner-img-wrapper">
             <img src="img/banner.jpeg" alt="Banner Personalizado" class="custom-banner-img">
@@ -52,7 +52,7 @@
         <div class="custom-banner-text-box">
             Bem-vindo ao<br>
             Nosso Site
-        </div>""
+        </div>
     </div>
     <div class="texto-direita-banner">
          Para nós, arquitetura vai além de construir
@@ -61,7 +61,7 @@
  isso combinado com uma interpretação
  profunda das necessidades de cada cliente.
     </div>
-</section>"
+</section>
 <section class="about-section">
     <div class="container">
         <div class="about-content">
