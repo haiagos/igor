@@ -9,7 +9,7 @@ include 'partials/header.php';
 ?>
 
 <main>
-<section class="section" style="margin-top: 2rem;">
+<section class="section">
     <div class="container">
         <div class="section-title">
             <h2>Entre em Contato</h2>
@@ -37,24 +37,32 @@ include 'partials/header.php';
                     </div>
                     
                     <div class="form-group">
-                        <label for="subject">Assunto *</label>
-                        <select id="subject" name="subject" class="form-control" required>
-                            <option value="">Selecione o assunto</option>
-                            <option value="arquitetura">Projeto de Arquitetura</option>
-                            <option value="interiores">Design de Interiores</option>
-                            <option value="bim">Consultoria BIM</option>
-                            <option value="reforma">Reforma/Ampliação</option>
-                            <option value="orcamento">Solicitação de Orçamento</option>
-                            <option value="outros">Outros</option>
-                        </select>
+                        <label for="cep">CEP *</label>
+                        <input type="text" id="cep" name="cep" class="form-control" required placeholder="00000-000">
                     </div>
-                    
+
+                    <div class="form-group">
+                        <label>Avaliação</label>
+                        <div class="rating">
+                            <input type="radio" id="star5" name="rating" value="5" />
+                            <label for="star5" title="5 estrelas"><i class="fas fa-star"></i></label>
+                            <input type="radio" id="star4" name="rating" value="4" />
+                            <label for="star4" title="4 estrelas"><i class="fas fa-star"></i></label>
+                            <input type="radio" id="star3" name="rating" value="3" />
+                            <label for="star3" title="3 estrelas"><i class="fas fa-star"></i></label>
+                            <input type="radio" id="star2" name="rating" value="2" />
+                            <label for="star2" title="2 estrelas"><i class="fas fa-star"></i></label>
+                            <input type="radio" id="star1" name="rating" value="1" />
+                            <label for="star1" title="1 estrela"><i class="fas fa-star"></i></label>
+                        </div>
+                    </div>
+
                     <div class="form-group">
                         <label for="message">Mensagem *</label>
                         <textarea id="message" name="message" class="form-control" rows="5" placeholder="Conte-nos sobre seu projeto, suas necessidades e expectativas..." required></textarea>
                     </div>
                     
-                    <button type="submit" class="btn" style="width: 100%;">
+                    <button type="submit" class="btn" style="width: 100%; background-color: #4a4a4a; color: white; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#333333'" onmouseout="this.style.backgroundColor='#4a4a4a'">
                         <i class="fas fa-paper-plane" style="margin-right: 0.5rem;"></i>
                         Enviar Mensagem
                     </button>
@@ -104,16 +112,15 @@ include 'partials/header.php';
                         </div>
                     </div>
                 </div>
-                  <!-- Horário de Atendimento -->
-                <div class="hours-card">
-                    <h4 class="hours-title">
-                        <i class="fas fa-clock hours-icon"></i>
+                  <!-- Horário de Atendimento -->                    <div class="hours-card">
+                    <h4 class="hours-title" style="color: white;">
+                        <i class="fas fa-clock hours-icon" style="color: white;"></i>
                         Horário de Atendimento
                     </h4>
                     <div class="hours-content">
-                        <p class="hours-item"><strong>Segunda a Sexta:</strong> 8h às 18h</p>
-                        <p class="hours-item"><strong>Sábado:</strong> 8h às 12h</p>
-                        <p class="hours-item"><strong>Domingo:</strong> Fechado</p>
+                        <p class="hours-item"><strong style="color: white;">Segunda a Sexta:</strong> 8h às 18h</p>
+                        <p class="hours-item"><strong style="color: white;">Sábado:</strong> 8h às 12h</p>
+                        <p class="hours-item"><strong style="color: white;">Domingo:</strong> Fechado</p>
                     </div>
                     <p class="hours-note">
                         * Atendimentos fora do horário comercial podem ser agendados previamente
@@ -122,7 +129,7 @@ include 'partials/header.php';
                   <!-- Área de Atuação -->
                 <div class="service-area-card">
                     <h4 class="service-area-title">
-                        <i class="fas fa-map service-area-icon"></i>
+                        <i class="fas fa-map service-area-icon" style="color: #d5a021ff;"></i>
                         Área de Atuação
                     </h4>
                     <div class="service-area-content">
@@ -145,8 +152,11 @@ include 'partials/header.php';
 
 
 
+    <!-- Botão flutuante do Instagram -->
+    <a href="https://instagram.com/igorsoglia.engenharia" target="_blank" rel="noopener" aria-label="Siga-nos no Instagram" class="instagram-float">
+        <i class="fab fa-instagram"></i>
+    </a>
 
-</section>
     </main>
 <?php include 'partials/footer.php'; ?>
-''
+<script src="JS/index.js"></script>

@@ -1,0 +1,29 @@
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    cursor: pointer;
+    width: 30px;
+    font-size: 24px;
+    color: #ddd;
+    transition: color 0.3s ease;
+}
+
+.rating label:hover,
+.rating label:hover ~ label,
+.rating input:checked ~ label {
+    color: #d5a021ff;
+}
+
+.rating label:hover:before,
+.rating label:hover ~ label:before,
+.rating input:checked ~ label:before {
+    opacity: 1;
+}

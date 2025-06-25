@@ -1,0 +1,41 @@
+.gallery-img {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+}
+
+.project-card {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-info {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 0 0 4px 4px;
+}
+
+.section-title {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.cta-button {
+    background-color: #a49694ff;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #8a7e7c;
+    color: white;
+}

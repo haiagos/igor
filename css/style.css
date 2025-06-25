@@ -1,5 +1,7 @@
 @import url('logo-navbar.css');
 @import url('custom-banner.css');
+@import url('rating.css');
+@import url('instagram-float.css');
 
 :root {
     --taupe: #4b4237ff;
@@ -25,6 +27,11 @@
 * {
     margin: 0;
     border-radius: 0 !important;
+}
+
+h1, h2, h3, h4, .section-heading {
+    color: #4a4a4a;
+    font-weight: 500;
 }
 
 body, html {
@@ -91,7 +98,7 @@ img, .banner-image, .about-image img {
 #carouselExample {
     max-height: 95vh;
     overflow: hidden;
-    margin-top: 0 !important; /* Garante que o banner não tenha espaçamento extra */
+    margin-top: 0 !important;
 }
 #carouselExample .carousel-inner,
 #carouselExample .carousel-item {
@@ -101,6 +108,25 @@ img, .banner-image, .about-image img {
     object-fit: cover;
     height: 95vh;
     width: 100%;
+}
+
+/* Ajuste da transição do carrossel */
+.carousel.carousel-fade .carousel-item {
+    display: block;
+    opacity: 0;
+    transition: opacity 2s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.carousel.carousel-fade .carousel-item.active {
+    opacity: 1;
+    position: relative;
+}
+
+.carousel.carousel-fade {
+    background: #000;
 }
 .carousel-caption {
     position: absolute;
@@ -115,11 +141,35 @@ img, .banner-image, .about-image img {
 .carousel-caption img {
     width: 120px;
     margin-bottom: 20px;
+    opacity: 0;
+    animation: logoFadeIn 1.5s ease-in-out forwards;
+}
+@keyframes logoFadeIn {
+    0% { 
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% { 
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 .carousel-caption h2,
 .carousel-caption p {
     color: #fff;
     text-shadow: 1px 1px 8px #000;
+    opacity: 0;
+    animation: textFadeIn 1s ease-in-out forwards;
+}
+.carousel-caption h2 {
+    animation-delay: 0.5s;
+}
+.carousel-caption p {
+    animation-delay: 0.8s;
+}
+@keyframes textFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 /* Corrigido nome da classe para about-section2 */
@@ -396,7 +446,7 @@ section.about-section2 {
     padding-bottom: 3rem;
 }
 .gallery-section h2 {
-    color: var(--taupe);
+    color: var(--taupe-gray);
     font-size: 2.5rem;
     margin-bottom: 2rem;
     position: relative;
@@ -479,12 +529,24 @@ section.about-section2 {
 
 /* Contact Page Styles */
 .section {
-    padding: 5rem 0;
+    padding: 4rem 0;
 }
 
 .section-title {
     text-align: center;
     margin-bottom: 3rem;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    color: #4a4a4a;
+    margin-bottom: 1rem;
+}
+
+.section-title p {
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .contact-grid {
@@ -494,90 +556,160 @@ section.about-section2 {
     margin-top: 3rem;
 }
 
-.contact-form-container {
-    margin-bottom: 2rem;
+.contact-form-container,
+.contact-info-container {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px !important;
+    box-shadow: var(--shadow);
 }
 
 .contact-form {
-    background: var(--gray-light);
-    padding: 2rem;
-    border-radius: 15px;
-}
-
-.section-title h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-.section-title p {
-    font-size: 1.1rem;
-    color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 .form-group {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
-    font-weight: 500;
     color: var(--text-color);
+    font-weight: 500;
 }
 
 .form-control {
     width: 100%;
-    padding: 1rem;
-    border: 2px solid var(--gray-medium);
-    border-radius: 10px;
-    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--gray-medium);
     transition: var(--transition);
-    background: var(--white);
 }
 
 .form-control:focus {
-    outline: none;
     border-color: var(--accent-color);
-    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+    box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.1);
 }
 
-textarea.form-control {
-    resize: vertical;
-    min-height: 120px;
+.contact-info-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
 }
 
-.btn {
-    display: inline-block;
-    padding: 1rem 2rem;
-    background: var(--accent-color);
+.contact-info-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-info-icon {
+    width: 40px;
+    height: 40px;
+    background: #4a4a4a;
+    border-radius: 50% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--white);
-    border: none;
-    border-radius: 10px;
-    font-weight: 600;
-    cursor: pointer;
+}
+
+.contact-info-text h5 {
+    margin: 0;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.contact-info-link {
+    color: var(--accent-color);
+    text-decoration: none;
     transition: var(--transition);
 }
 
-.btn:hover {
-    background: #c19b26;
-    transform: translateY(-2px);
+.contact-info-link:hover {
+    color: var(--taupe);
 }
 
+.hours-card {
+    background-color: #483C32;
+    color: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.hours-title,
+.hours-content,
+.hours-note,
+.hours-item {
+    color: white;
+}
+
+.hours-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.hours-content {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.service-area-card {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px !important;
+    margin-top: 2rem;
+}
+
+.hours-title,
+.service-area-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #4a4a4a;
+    margin-bottom: 1rem;
+}
+
+.service-area-list {
+    list-style: none;
+    padding-left: 1rem;
+    margin: 0.5rem 0;
+}
+
+.service-area-list li {
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.service-area-list li::before {
+    content: "•";
+    color: var(--accent-color);
+    position: absolute;
+    left: -1rem;
+}
+
+/* Cards Grid Section Styles */
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
-    margin-top: 3rem;
+    padding: 2rem 0;
 }
 
 .card {
     background: var(--white);
     padding: 2rem;
-    border-radius: 15px;
+    text-align: center;
+    border: none;
     box-shadow: var(--shadow);
     transition: var(--transition);
+    border-radius: 8px !important;
 }
 
 .card:hover {
@@ -586,246 +718,133 @@ textarea.form-control {
 }
 
 .card-icon {
-    width: 60px;
-    height: 60px;
-    background: var(--accent-color);
-    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    background: #4a4a4a;
+    border-radius: 50% !important;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1.5rem;
+    margin: 0 auto 1.5rem;
 }
 
 .card-icon i {
+    font-size: 1.75rem;
+}
+
+.card h3 {
     font-size: 1.5rem;
-    color: var(--white);
-}
-
-.alert {
-    padding: 1rem;
+    color: #4a4a4a;
     margin-bottom: 1rem;
-    border-radius: 10px;
-    font-weight: 500;
 }
 
-.alert-success {
-    background: #d4edda;
-    color: #155724;
-    border: 1px solid #c3e6cb;
-}
-
-.alert-error {
-    background: #f8d7da;
-    color: #721c24;
-    border: 1px solid #f5c6cb;
-}
-
-.section-heading {
-    color: var(--primary-color);
-    margin-bottom: 2rem;
-}
-
-.contact-info-card {
-    background: var(--white);
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: var(--shadow);
-    margin-bottom: 2rem;
-}
-
-.contact-info-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1.5rem;
-}
-
-.contact-info-icon {
-    width: 50px;
-    height: 50px;
-    background: var(--accent-color);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 1rem;
-}
-
-.contact-info-icon i {
-    color: var(--white);
-}
-
-.contact-info-title {
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-}
-
-.contact-info-link {
-    color: var(--text-color);
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.contact-info-link:hover {
-    color: var(--accent-color);
-}
-
-.hours-card {
-    background: var(--primary-color);
-    color: var(--white);
-    padding: 2rem;
-    border-radius: 15px;
-    margin-bottom: 2rem;
-}
-
-.hours-title {
-    margin-bottom: 1.5rem;
-    display: flex;
-    align-items: center;
-}
-
-.hours-icon {
-    margin-right: 0.5rem;
-    color: var(--accent-color);
-}
-
-.hours-content {
-    line-height: 1.8;
-}
-
-.hours-item {
-    margin-bottom: 0.5rem;
-}
-
-.hours-note {
-    margin-top: 1rem;
-    font-size: 0.9rem;
-    color: #ccc;
-}
-
-.service-area-card {
-    background: var(--gray-light);
-    padding: 2rem;
-    border-radius: 15px;
-}
-
-.service-area-title {
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
-    display: flex;
-    align-items: center;
-}
-
-.service-area-icon {
-    margin-right: 0.5rem;
-    color: var(--accent-color);
-}
-
-.service-area-content {
-    color: var(--text-color);
-    line-height: 1.8;
-}
-
-.service-area-list {
-    margin-left: 1rem;
+.card p {
     color: var(--text-light);
-}
-
-/* Portfolio filter and gallery section */
-.portfolio-section .filter-btn {
-    padding: 0.5rem 1.5rem;
-    border: 2px solid var(--accent-color);
-    background: transparent;
-    color: var(--accent-color);
-    border-radius: 25px;
-    cursor: pointer;
-    transition: var(--transition);
-    font-weight: 500;
-}
-.portfolio-section .filter-btn.active,
-.portfolio-section .filter-btn:hover {
-    background: var(--accent-color);
-    color: white;
-}
-.portfolio-section .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-}
-.portfolio-section .gallery-item {
-    position: relative;
-    overflow: hidden;
-    transition: var(--transition);
-}
-.portfolio-section .gallery-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: var(--transition);
-}
-.portfolio-section .gallery-item:hover .gallery-overlay {
-    opacity: 1;
-}
-
-/* Hover overlay for portfolio gallery images */
-.thumb-container {
-    position: relative;
-    overflow: hidden;
-}
-.thumb-container img {
-    display: block;
-    width: 100%;
-    transition: all 0.3s ease;
-}
-.thumb-container .overlay {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.6);
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    padding: 0.5rem;
-    text-align: center;
-}
-.thumb-container:hover img {
-    filter: brightness(70%);
-}
-.thumb-container:hover .overlay {
-    opacity: 1;
-}
-
-/* Seção de introdução do portfólio */
-.intro-portfolio {
-    padding: 4rem 0;
-    background-color: var(--white);
-}
-.intro-portfolio .container h2 {
-    color: var(--primary-color);
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    font-weight: 600;
-}
-.intro-portfolio .container p {
-    color: var(--primary-color);
-    max-width: 600px;
-    margin: 0 auto;
-    font-size: 1.1rem;
     line-height: 1.6;
 }
 
-/* Featured Section Background */
-.featured-section {
-    background-color: var(--taupe-gray) !important;
+/* Responsividade para os cards */
+@media (max-width: 768px) {
+    .cards-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        padding: 1.5rem 0;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .card-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .card-icon i {
+        font-size: 1.5rem;
+    }
+
+    .card h3 {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem 0;
+    }
+}
+
+/* Responsividade para a página de contato */
+@media (max-width: 992px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .section-title h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 3rem 0;
+    }
+
+    .contact-form-container,
+    .contact-info-container {
+        padding: 1.5rem;
+    }
+
+    .section-title h2 {
+        font-size: 1.75rem;
+    }
+
+    .contact-info-item {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .hours-card,
+    .service-area-card {
+        padding: 1.25rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .section {
+        padding: 2rem 0;
+    }
+
+    .section-title {
+        margin-bottom: 2rem;
+    }
+
+    .contact-form-container,
+    .contact-info-container {
+        padding: 1rem;
+    }
+
+    .contact-info-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .form-group {
+        margin-bottom: 0.75rem;
+    }
+
+    .form-control {
+        padding: 0.6rem 0.875rem;
+    }
+}
+
+.hours-card strong {
+    color: white;
+    font-weight: 600;
 }
 
 /* Botão flutuante do Instagram */
@@ -833,71 +852,44 @@ textarea.form-control {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: var(--accent-color) !important;
-    color: #fff;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50% !important;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    text-decoration: none !important;
-}
-.instagram-float:hover {
-    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2a8e, #9059ba) !important;
     text-decoration: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    background-color: #4a4a4a !important;
 }
 
-/* Caixa de destaque de projetos */
-.project-box {
-    background-color: var(--taupe) !important;
-    color: var(--white) !important;
+.instagram-float i {
+    font-size: 24px;
+    transition: all 0.3s ease;
+    color: white;
 }
 
-/* Seção info-section background taupe-brown */
-.info-section {
-    background-color: var(--white) !important;
-    position: static !important;
-    padding: 4rem 0 !important;
-}
-.info-section img {
-    transform: none !important;
-    max-width: 100% !important;
-    margin: 0 auto !important;
-}
-.text-box {
-    display: block; /* remove positioning absoluto */
+.instagram-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
-/* Override para seções com bg-light, corrigindo background branco global */
-.section.bg-light {
-    background-color: var(--gray-light) !important;
+.instagram-float:hover i {
+    transform: scale(1.1);
 }
 
-/* Custom background for last section */
-.section.bg-light {
-    background-color: #A18462 !important;
-}
-.section.bg-light .section-title h2 {
-    color: #f5f5f5;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-}
-.section.bg-light .section-title p {
-    color: #e0e0e0;
-    font-size: 1.1rem;
-}
-.section.bg-light .card {
-    background-color: white !important;
-    color: #333;
-    border: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.section.bg-light .card h3,
-.section.bg-light .card p {
-    color: #333;
+/* Responsividade do botão do Instagram */
+@media (max-width: 768px) {
+    .instagram-float {
+        width: 50px;
+        height: 50px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .instagram-float i {
+        font-size: 20px;
+    }
 }
