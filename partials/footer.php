@@ -1,6 +1,4 @@
-   </main>
-
-    <footer class="footer">
+<footer class="footer">
         <div class="footer-container">
             <div class="footer-content">
                 <div class="footer-section">
@@ -10,24 +8,13 @@
                         <a href="https://instagram.com/igorsoglia.engenharia" target="_blank" aria-label="Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="mailto:contato@igorsoglia.com" aria-label="Email">
-                            <i class="fas fa-envelope"></i>
+                        <a href="https://wa.me/5511995478832" target="_blank" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
                         </a>
-                        <a href="tel:+5511995478832" aria-label="Telefone">
-                            <i class="fas fa-phone"></i>
+                        <a href="https://facebook.com/igorsoglia.engenharia" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
                         </a>
                     </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Navegação</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.php">Home</a></li>
-                        <li><a href="sobre.php">Sobre</a></li>
-                        <li><a href="servicos.php">Serviços</a></li>
-                        <li><a href="portfolio.php">Portfólio</a></li>
-                        <li><a href="conceitos.php">Conceitos</a></li>
-                        <li><a href="contato.php">Contato</a></li>
-                    </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Contato</h4>
@@ -36,15 +23,6 @@
                         <p><i class="fas fa-phone"></i> (11) 99547-8832</p>
                         <p><i class="fas fa-envelope"></i> contato@igorsoglia.com</p>
                     </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Especialidades</h4>
-                    <ul class="footer-specialties">
-                        <li>Arquitetura Residencial</li>
-                        <li>Design de Interiores</li>
-                        <li>Projetos Minimalistas</li>
-                        <li>Consultoria BIM</li>
-                    </ul>
                 </div>
             </div>
             <div class="footer-bottom">

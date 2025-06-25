@@ -1,113 +1,33 @@
 <?php include 'partials/header.php'; ?>
 <main>
- 
-    <!-- Conteúdo da página de projetos -->
-    <section class="projects-tab-section py-5">
+    <!-- Seção de Introdução -->
+    <section class="intro-portfolio py-5 bg-light">
+        <div class="container text-center">
+            <h1 class="display-4 mb-4">Nossos Projetos</h1>
+            <p class="lead">Explore nossa coleção de projetos arquitetônicos, onde cada design conta uma história única de inovação, funcionalidade e beleza.</p>
+        </div>
+    </section>
+
+    <!-- Seção Residencial -->
+    <section class="featured-section py-5">
         <div class="container">
-            <h2 class="text-center mb-4">Meus Projetos</h2>
-            <ul class="nav nav-tabs justify-content-center mb-4" id="projectsTab" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="grid-tab" data-bs-toggle="tab" data-bs-target="#grid" type="button" role="tab">Grade</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="carousel-tab" data-bs-toggle="tab" data-bs-target="#carousel" type="button" role="tab">Carrossel</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="list-tab" data-bs-toggle="tab" data-bs-target="#list" type="button" role="tab">Lista</button>
-                </li>
-            </ul>
-            <div class="tab-content" id="projectsTabContent">
-                <div class="tab-pane fade show active" id="grid" role="tabpanel">
-                    <div class="row">
-                        <!-- Grid View -->
-                        <div class="col-md-4 mb-4">
-                            <div class="card h-100">
-                                <img src="img/primeira apresentação.jpeg" class="card-img-top" alt="Projeto 1">
-                                <div class="card-body">
-                                    <h5 class="card-title">Projeto 1</h5>
-                                    <p class="card-text">Descrição do produto ou projeto 1.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="card h-100">
-                                <img src="img/WhatsApp Image 2025-06-12 at 09.37.11.jpeg" class="card-img-top" alt="Projeto 2">
-                                <div class="card-body">
-                                    <h5 class="card-title">Projeto 2</h5>
-                                    <p class="card-text">Descrição do produto ou projeto 2.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="card h-100">
-                                <img src="img/WhatsApp Image 2025-06-12 at 09.37.12.jpeg" class="card-img-top" alt="Projeto 3">
-                                <div class="card-body">
-                                    <h5 class="card-title">Projeto 3</h5>
-                                    <p class="card-text">Descrição do produto ou projeto 3.</p>
-                                </div>
-                            </div>
+            <h2 class="text-center mb-5" style="text-transform: uppercase; letter-spacing: 2px; font-weight: 600;">Projetos Residenciais</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="project-card">
+                        <img src="img/primeira apresentação.jpeg" class="img-fluid rounded" alt="Residência Contemporânea">
+                        <div class="project-info p-4">
+                            <h3>Residência Contemporânea</h3>
+                            <p>Um projeto que combina elegância e funcionalidade, com espaços amplos e integrados à natureza.</p>
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="carousel" role="tabpanel">
-                    <!-- Carousel View -->
-                    <div id="projectsCarousel" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="img/primeira apresentação.jpeg" class="d-block w-100" alt="Projeto 1">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5>Projeto 1</h5>
-                                    <p>Descrição do produto ou projeto 1.</p>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/WhatsApp Image 2025-06-12 at 09.37.11.jpeg" class="d-block w-100" alt="Projeto 2">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5>Projeto 2</h5>
-                                    <p>Descrição do produto ou projeto 2.</p>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/WhatsApp Image 2025-06-12 at 09.37.12.jpeg" class="d-block w-100" alt="Projeto 3">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5>Projeto 3</h5>
-                                    <p>Descrição do produto ou projeto 3.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#projectsCarousel" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Anterior</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#projectsCarousel" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Próximo</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="list" role="tabpanel">
-                    <!-- List View -->
-                    <div class="list-group">
-                        <div class="list-group-item d-flex align-items-center">
-                            <img src="img/primeira apresentação.jpeg" alt="Projeto 1" class="me-3" style="width:100px; height:auto;">
-                            <div>
-                                <h5 class="mb-1">Projeto 1</h5>
-                                <p class="mb-1">Descrição do produto ou projeto 1.</p>
-                            </div>
-                        </div>
-                        <div class="list-group-item d-flex align-items-center">
-                            <img src="img/WhatsApp Image 2025-06-12 at 09.37.11.jpeg" alt="Projeto 2" class="me-3" style="width:100px; height:auto;">
-                            <div>
-                                <h5 class="mb-1">Projeto 2</h5>
-                                <p class="mb-1">Descrição do produto ou projeto 2.</p>
-                            </div>
-                        </div>
-                        <div class="list-group-item d-flex align-items-center">
-                            <img src="img/WhatsApp Image 2025-06-12 at 09.37.12.jpeg" alt="Projeto 3" class="me-3" style="width:100px; height:auto;">
-                            <div>
-                                <h5 class="mb-1">Projeto 3</h5>
-                                <p class="mb-1">Descrição do produto ou projeto 3.</p>
-                            </div>
+                <div class="col-md-6">
+                    <div class="project-card">
+                        <img src="img/WhatsApp Image 2025-06-12 at 09.37.12.jpeg" class="img-fluid rounded" alt="Casa Moderna">
+                        <div class="project-info p-4">
+                            <h3>Casa Moderna</h3>
+                            <p>Design inovador que maximiza o aproveitamento de luz natural e ventilação.</p>
                         </div>
                     </div>
                 </div>
@@ -115,78 +35,169 @@
         </div>
     </section>
 
-    <section class="project-detail-section py-5">
+    <!-- Seção Design de Interiores -->
+    <section class="featured-section py-5 bg-light">
         <div class="container">
-            <div class="row align-items-center mb-5">
-                <div class="col-md-6">
-                    <h3>Projeto Detalhado 1</h3>
-                    <p>Descrição detalhada do projeto 1. Aqui você pode destacar tecnologias usadas, funcionalidades e resultados alcançados.</p>
+            <h2 class="text-center mb-5" style="text-transform: uppercase; letter-spacing: 2px; font-weight: 600;">Design de Interiores</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <img src="img/WhatsApp Image 2025-06-12 at 09.37.11.jpeg" class="img-fluid rounded" alt="Living Contemporâneo">
+                        <div class="project-info p-4">
+                            <h3>Living Contemporâneo</h3>
+                            <p>Ambientes que combinam conforto e sofisticação.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    <img src="img/primeira apresentação.jpeg" class="img-fluid rounded" alt="Projeto Detalhado 1">
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <img src="img/WhatsApp Image 2025-06-12 at 09.37.13.jpeg" class="img-fluid rounded" alt="Cozinha Gourmet">
+                        <div class="project-info p-4">
+                            <h3>Cozinha Gourmet</h3>
+                            <p>Espaços funcionais com acabamentos premium.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <img src="img/WhatsApp Image 2025-06-12 at 09.37.15.jpeg" class="img-fluid rounded" alt="Suíte Master">
+                        <div class="project-info p-4">
+                            <h3>Suíte Master</h3>
+                            <p>Conforto e elegância em cada detalhe.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="row align-items-center mb-5">
-                <div class="col-md-6 order-md-2">
-                    <h3>Projeto Detalhado 2</h3>
-                    <p>Descrição detalhada do projeto 2. Destaque características, desafios superados e benefícios para o cliente.</p>
-                </div>
-                <div class="col-md-6 order-md-1">
-                    <img src="img/WhatsApp Image 2025-06-12 at 09.37.11.jpeg" class="img-fluid rounded" alt="Projeto Detalhado 2">
-                </div>
-            </div>
+        </div>
+    </section>
+
+    <!-- Seção Projetos Minimalistas -->
+    <section class="featured-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5" style="text-transform: uppercase; letter-spacing: 2px; font-weight: 600;">Projetos Minimalistas</h2>
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <h3>Projeto Detalhado 3</h3>
-                    <p>Descrição detalhada do projeto 3. Fale sobre design, usabilidade e resultados obtidos.</p>
+                    <img src="img/WhatsApp Image 2025-06-04 at 19.29.32.jpeg" class="img-fluid rounded" alt="Design Minimalista">
                 </div>
                 <div class="col-md-6">
-                    <img src="img/WhatsApp Image 2025-06-12 at 09.37.12.jpeg" class="img-fluid rounded" alt="Projeto Detalhado 3">
+                    <div class="project-box p-4 shadow rounded-0">
+                        <h3 style="text-transform: uppercase; letter-spacing: 2px; font-weight: 600;">Design Minimalista</h3>
+                        <p>Nossos projetos minimalistas são a expressão máxima do "menos é mais". 
+                        Criamos ambientes limpos e sofisticados, onde cada elemento tem seu propósito.
+                        A simplicidade encontra a elegância em cada detalhe cuidadosamente planejado.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="gallery-section py-5">
+    <!-- Seção Projetos Modernos -->
+    <section class="featured-section py-5 bg-light">
         <div class="container">
-            <h2 class="text-center mb-4">Galeria de Fotos</h2>
-            <div class="row row-cols-2 row-cols-sm-4 row-cols-md-6 row-cols-lg-8 g-2">
-                <div class="col"><img src="img/banner.jpeg" class="gallery-thumb-square" data-src="img/banner.jpeg" alt="Foto 1"></div>
-                <div class="col"><img src="img/logo.png" class="gallery-thumb-square" data-src="img/logo.png" alt="Foto 2"></div>
-                <div class="col"><img src="img/primeira apresentação.jpeg" class="gallery-thumb-square" data-src="img/primeira apresentação.jpeg" alt="Foto 3"></div>
-                <div class="col"><img src="img/WhatsApp Image 2025-06-04 at 19.29.41.jpeg" class="gallery-thumb-square" data-src="img/WhatsApp Image 2025-06-04 at 19.29.41.jpeg" alt="Foto 4"></div>
-                <div class="col"><img src="img/WhatsApp Image 2025-06-12 at 09.37.11.jpeg" class="gallery-thumb-square" data-src="img/WhatsApp Image 2025-06-12 at 09.37.11.jpeg" alt="Foto 5"></div>
-                <div class="col"><img src="img/WhatsApp Image 2025-06-12 at 09.37.12.jpeg" class="gallery-thumb-square" data-src="img/WhatsApp Image 2025-06-12 at 09.37.12.jpeg" alt="Foto 6"></div>
-                <div class="col"><img src="img/WhatsApp Image 2025-06-04 at 19.29.32.jpeg" class="gallery-thumb-square" data-src="img/WhatsApp Image 2025-06-04 at 19.29.32.jpeg" alt="Foto 7"></div>
-                <div class="col"><img src="img/WhatsApp Image 2025-06-04 at 19.27.42 (2).jpeg" class="gallery-thumb-square" data-src="img/WhatsApp Image 2025-06-04 at 19.27.42 (2).jpeg" alt="Foto 8"></div>
-                <div class="col"><img src="img/WhatsApp Image 2025-06-12 at 09.37.11 (1).jpeg" class="gallery-thumb-square" data-src="img/WhatsApp Image 2025-06-12 at 09.37.11 (1).jpeg" alt="Foto 9"></div>
-                <div class="col"><img src="img/WhatsApp Image 2025-06-12 at 09.37.12 (2).jpeg" class="gallery-thumb-square" data-src="img/WhatsApp Image 2025-06-12 at 09.37.12 (2).jpeg" alt="Foto 10"></div>
-                <div class="col"><img src="img/WhatsApp Image 2025-06-04 at 19.29.32 (3).jpeg" class="gallery-thumb-square" data-src="img/WhatsApp Image 2025-06-04 at 19.29.32 (3).jpeg" alt="Foto 11"></div>
-                <div class="col"><img src="img/WhatsApp Image 2025-06-12 at 09.37.12 (3).jpeg" class="gallery-thumb-square" data-src="img/WhatsApp Image 2025-06-12 at 09.37.12 (3).jpeg" alt="Foto 12"></div>
-            </div>
-        </div>
-        <!-- Lightbox Modal -->
-        <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content bg-transparent border-0 d-flex justify-content-center align-items-center position-relative p-0">
-                    <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Fechar"></button>
-                    <img src="" id="lightboxImage" class="modal-img rounded" alt="">
+            <h2 class="text-center mb-5" style="text-transform: uppercase; letter-spacing: 2px; font-weight: 600;">Projetos Modernos</h2>
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <div class="project-card">
+                        <img src="img/WhatsApp Image 2025-06-04 at 19.27.42 (4).jpeg" class="img-fluid rounded" alt="Projeto Moderno Destaque">
+                        <div class="project-info p-4">
+                            <h3>Residência Moderna</h3>
+                            <p>Uma fusão perfeita entre tecnologia e design contemporâneo.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="row g-4">
+                        <div class="col-lg-12">
+                            <div class="project-card">
+                                <img src="img/WhatsApp Image 2025-06-12 at 09.37.14.jpeg" class="img-fluid rounded" alt="Detalhe Moderno 1">
+                                <div class="project-info p-4">
+                                    <h3>Detalhes Modernos</h3>
+                                    <p>Inovação em cada acabamento.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="project-card">
+                                <img src="img/WhatsApp Image 2025-06-12 at 09.37.13.jpeg" class="img-fluid rounded" alt="Detalhe Moderno 2">
+                                <div class="project-info p-4">
+                                    <h3>Espaços Integrados</h3>
+                                    <p>Fluidez e funcionalidade.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Galeria Completa -->
+    <section class="gallery-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5" style="text-transform: uppercase; letter-spacing: 2px; font-weight: 600;">Galeria Completa</h2>
+            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
+                <!-- As 12 melhores fotos do seu portfólio -->
+                <div class="col">
+                    <img src="img/primeira apresentação.jpeg" class="img-fluid rounded gallery-img" alt="Projeto 1" data-bs-toggle="modal" data-bs-target="#imageModal">
+                </div>
+                <div class="col">
+                    <img src="img/WhatsApp Image 2025-06-12 at 09.37.11.jpeg" class="img-fluid rounded gallery-img" alt="Projeto 2" data-bs-toggle="modal" data-bs-target="#imageModal">
+                </div>
+                <div class="col">
+                    <img src="img/WhatsApp Image 2025-06-12 at 09.37.12.jpeg" class="img-fluid rounded gallery-img" alt="Projeto 3" data-bs-toggle="modal" data-bs-target="#imageModal">
+                </div>
+                <div class="col">
+                    <img src="img/WhatsApp Image 2025-06-04 at 19.29.32.jpeg" class="img-fluid rounded gallery-img" alt="Projeto 4" data-bs-toggle="modal" data-bs-target="#imageModal">
+                </div>
+                <div class="col">
+                    <img src="img/WhatsApp Image 2025-06-04 at 19.27.41.jpeg" class="img-fluid rounded gallery-img" alt="Projeto 5" data-bs-toggle="modal" data-bs-target="#imageModal">
+                </div>
+                <div class="col">
+                    <img src="img/WhatsApp Image 2025-06-12 at 09.37.13.jpeg" class="img-fluid rounded gallery-img" alt="Projeto 6" data-bs-toggle="modal" data-bs-target="#imageModal">
+                </div>
+                <div class="col">
+                    <img src="img/WhatsApp Image 2025-06-12 at 09.37.14.jpeg" class="img-fluid rounded gallery-img" alt="Projeto 7" data-bs-toggle="modal" data-bs-target="#imageModal">
+                </div>
+                <div class="col">
+                    <img src="img/WhatsApp Image 2025-06-04 at 19.27.42 (4).jpeg" class="img-fluid rounded gallery-img" alt="Projeto 8" data-bs-toggle="modal" data-bs-target="#imageModal">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para visualização das imagens -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-transparent border-0">
+                <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                <img src="" class="img-fluid" id="modalImage" alt="Projeto em destaque">
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="mb-4">Vamos Criar Seu Projeto?</h2>
+            <p class="lead mb-4">Entre em contato conosco e transforme seus sonhos em realidade.</p>
+            <a href="contato.php" class="btn btn-lg px-5" style="background-color: #a49694ff; color: white;">Fale Conosco</a>
         </div>
     </section>
 </main>
+
 <?php include 'partials/footer.php'; ?>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
 <script>
-    // Script para abrir a imagem em tamanho grande no modal
-    document.querySelectorAll('.gallery-thumb-square').forEach(item => {
-        item.addEventListener('click', event => {
-            const src = item.getAttribute('data-src');
-            document.getElementById('lightboxImage').setAttribute('src', src);
-            const myModal = new bootstrap.Modal(document.getElementById('lightboxModal'));
-            myModal.show();
+    // Script para o modal de imagens
+    document.addEventListener('DOMContentLoaded', function() {
+        const galleryImages = document.querySelectorAll('.gallery-img');
+        const modalImage = document.getElementById('modalImage');
+
+        galleryImages.forEach(img => {
+            img.addEventListener('click', function() {
+                modalImage.src = this.src;
+            });
         });
     });
 </script>

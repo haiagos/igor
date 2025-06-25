@@ -31,14 +31,14 @@ body, html {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: var(--alabaster) !important;
+    background-color: var(--white) !important;
     height: 100%;
     padding-top: 0 !important;
 }
 
 .navbar, nav.navbar, .navbar.bg-white, .navbar.navbar-expand-lg {
     --bs-bg-opacity: 1;
-    background-color: var(--alabaster) !important;
+    background-color: var(--white) !important;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -57,7 +57,7 @@ body, html {
     left: 0;
     width: 100%;
     height: 3px;
-    background-color: hsl(44, 64%, 60%);
+    background-color: #4a4a4a;
     transform: scaleX(0);
     transition: transform 0.3s;
 }
@@ -68,7 +68,7 @@ body, html {
 }
 
 .nav-link.active {
-    color: hsl(44, 64%, 60%);
+    color: #4a4a4a;
     font-weight: 500;
 }
 
@@ -76,6 +76,12 @@ main {
     flex: 1 0 auto;
     margin-top: 0 !important; /* Removido o espaçamento do navbar para o banner */
     padding-top: 0 !important;
+}
+
+/* Sections and main background white */
+section, .about-section, .about-section2, .custom-banner-container,
+main {
+    background-color: var(--white) !important;
 }
 
 img, .banner-image, .about-image img {
@@ -119,9 +125,7 @@ img, .banner-image, .about-image img {
 /* Corrigido nome da classe para about-section2 */
 section.about-section2 {
     margin-top: 96px;
-}
-section, .about-section, .about-section2, .custom-banner-container {
-    background: var(--alabaster) !important;
+    background: none !important;
 }
 
 .about-section {
@@ -215,8 +219,9 @@ section, .about-section, .about-section2, .custom-banner-container {
     margin-bottom: 0.5rem;
 }
 
+/* Hide footer navigation links */
 .footer-links {
-    list-style: none;
+    display: none !important;
 }
 
 .footer-links a {
@@ -249,8 +254,32 @@ section, .about-section, .about-section2, .custom-banner-container {
 }
 
 .footer-social a:hover {
+    background-color: #fff !important;
+}
+
+.footer-social a:hover {
     background: var(--accent-color);
     transform: translateY(-2px);
+}
+
+/* Hover das cores dos ícones sociais no footer */
+.footer-social a[aria-label="Instagram"] i {
+    transition: color 0.3s;
+}
+.footer-social a[aria-label="Instagram"]:hover i {
+    color: #E1306C;
+}
+.footer-social a[aria-label="WhatsApp"] i {
+    transition: color 0.3s;
+}
+.footer-social a[aria-label="WhatsApp"]:hover i {
+    color: #25D366;
+}
+.footer-social a[aria-label="Facebook"] i {
+    transition: color 0.3s;
+}
+.footer-social a[aria-label="Facebook"]:hover i {
+    color: #1877F2;
 }
 
 .footer-contact p {
@@ -270,36 +299,9 @@ section, .about-section, .about-section2, .custom-banner-container {
     color: #ccc;
 }
 
-/* Decorative section dividers */
-section {
-    position: relative;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-}
-
-section:not(:first-of-type)::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80px;
-    height: 4px;
-    background: var(--goldenrod);
-    border-radius: 2px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-section:not(:last-of-type)::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 50%);
-    width: 80px;
-    height: 2px;
-    background: var(--taupe-brown);
-    opacity: 0.6;
+/* Hide footer specialties section */
+.footer-content .footer-section:nth-child(4) {
+    display: none !important;
 }
 
 /* Fade-in effect for section images, icons, and text */
@@ -387,18 +389,6 @@ section:not(:last-of-type)::after {
     }
 }
 
-@media (max-width: 991px) {
-    .navbar-collapse {
-        background-color: #fff !important;
-        padding: 1rem;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-    .nav-link {
-        margin: 0.5rem 0;
-    }
-}
-
 /* Galeria de fotos */
 .gallery-section {
     background-color: var(--alabaster);
@@ -449,6 +439,15 @@ section:not(:last-of-type)::after {
     transform: scale(1.05);
     border-color: var(--goldenrod);
     z-index: 1;
+}
+
+/* Hover yellow border on gallery images */
+.gallery-thumb-square {
+    border: 3px solid transparent;
+    transition: border-color 0.3s ease;
+}
+.gallery-thumb-square:hover {
+    border-color: var(--accent-color);
 }
 
 /* Lightbox Modal */
@@ -729,4 +728,176 @@ textarea.form-control {
 .service-area-list {
     margin-left: 1rem;
     color: var(--text-light);
+}
+
+/* Portfolio filter and gallery section */
+.portfolio-section .filter-btn {
+    padding: 0.5rem 1.5rem;
+    border: 2px solid var(--accent-color);
+    background: transparent;
+    color: var(--accent-color);
+    border-radius: 25px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 500;
+}
+.portfolio-section .filter-btn.active,
+.portfolio-section .filter-btn:hover {
+    background: var(--accent-color);
+    color: white;
+}
+.portfolio-section .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+.portfolio-section .gallery-item {
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+}
+.portfolio-section .gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition);
+}
+.portfolio-section .gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+/* Hover overlay for portfolio gallery images */
+.thumb-container {
+    position: relative;
+    overflow: hidden;
+}
+.thumb-container img {
+    display: block;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+.thumb-container .overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 0.5rem;
+    text-align: center;
+}
+.thumb-container:hover img {
+    filter: brightness(70%);
+}
+.thumb-container:hover .overlay {
+    opacity: 1;
+}
+
+/* Seção de introdução do portfólio */
+.intro-portfolio {
+    padding: 4rem 0;
+    background-color: var(--white);
+}
+.intro-portfolio .container h2 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+.intro-portfolio .container p {
+    color: var(--primary-color);
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Featured Section Background */
+.featured-section {
+    background-color: var(--taupe-gray) !important;
+}
+
+/* Botão flutuante do Instagram */
+.instagram-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--accent-color) !important;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    text-decoration: none !important;
+}
+.instagram-float:hover {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2a8e, #9059ba) !important;
+    text-decoration: none;
+}
+
+/* Caixa de destaque de projetos */
+.project-box {
+    background-color: var(--taupe) !important;
+    color: var(--white) !important;
+}
+
+/* Seção info-section background taupe-brown */
+.info-section {
+    background-color: var(--white) !important;
+    position: static !important;
+    padding: 4rem 0 !important;
+}
+.info-section img {
+    transform: none !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+}
+.text-box {
+    display: block; /* remove positioning absoluto */
+}
+
+/* Override para seções com bg-light, corrigindo background branco global */
+.section.bg-light {
+    background-color: var(--gray-light) !important;
+}
+
+/* Custom background for last section */
+.section.bg-light {
+    background-color: #A18462 !important;
+}
+.section.bg-light .section-title h2 {
+    color: #f5f5f5;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+.section.bg-light .section-title p {
+    color: #e0e0e0;
+    font-size: 1.1rem;
+}
+.section.bg-light .card {
+    background-color: white !important;
+    color: #333;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.section.bg-light .card h3,
+.section.bg-light .card p {
+    color: #333;
 }
