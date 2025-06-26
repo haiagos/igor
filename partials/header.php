@@ -8,7 +8,7 @@
     <link href="css/portfolio.css" rel="stylesheet">
     <link href="css/custom-banner.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <title>Igorjean</title>
+    <title>igorsoglia</title>
     <style>
         .fade-in {
             opacity: 0;
@@ -60,7 +60,7 @@
         <div class="container-fluid container">
             <a class="navbar-brand d-flex align-items-center" href="index.php">
                 <img src="img/logo2.png" alt="Logo" class="navbar-logo">
-                <span class="ms-2">Igorjean</span>
+                <span class="ms-2">IgorSoglia</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
