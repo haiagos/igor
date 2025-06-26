@@ -46,12 +46,6 @@
     .feature-list li {
         padding: 12px 0;
         border-bottom: 1px solid rgba(0,0,0,0.05);
-        transition: all 0.3s ease;
-    }
-    
-    .feature-list li:hover {
-        padding-left: 10px;
-        color: #4a4a4a;
     }
     
     .section-divider {
@@ -244,7 +238,7 @@
     </main>
 
     <!-- Botão flutuante do Instagram -->
-    <a href="https://instagram.com/igorsoglia.engenharia" target="_blank" rel="noopener" aria-label="Siga-nos no Instagram" class="instagram-float">
+    <a href="https://www.instagram.com/igorsoglia.engenharia?igsh=NTd0Y3FieGI3MmFt&utm_source=qr" target="_blank" rel="noopener" aria-label="Siga-nos no Instagram" class="instagram-float">
         <i class="fab fa-instagram"></i>
     </a>
 

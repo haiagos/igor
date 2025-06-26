@@ -132,4 +132,43 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
 });
+
+// Função para enviar o formulário via WhatsApp
+function submitContactForm(event) {
+    event.preventDefault();
+
+    // Pegar os valores do formulário
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const cep = document.getElementById('cep').value;
+    const rating = document.querySelector('input[name="rating"]:checked')?.value || 'Não avaliado';
+    const message = document.getElementById('message').value;
+
+    // Formatar a mensagem para o WhatsApp
+    const whatsappMessage = 
+`*Novo Contato do Site*
+━━━━━━━━━━━━━━━
+👤 *Nome:* ${name}
+📧 *Email:* ${email}
+📱 *Telefone:* ${phone}
+📍 *CEP:* ${cep}
+⭐ *Avaliação:* ${rating} estrelas
+━━━━━━━━━━━━━━━
+📝 *Mensagem:*
+${message}`;
+
+    // Codificar a mensagem para a URL do WhatsApp
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+
+    // Criar URL do WhatsApp (com formato internacional correto do número)
+    const whatsappUrl = `https://api.whatsapp.com/send/?phone=5511995478832&text=${encodedMessage}&type=phone_number&app_absent=0`;
+
+    // Abrir o WhatsApp em uma nova janela
+    window.open(whatsappUrl, '_blank');
+    
+    // Adicionar feedback visual
+    alert('Redirecionando para o WhatsApp...');
+}

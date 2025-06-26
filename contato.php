@@ -108,7 +108,7 @@ include 'partials/header.php';
                         </div>
                         <div class="contact-info-text">
                             <h5 class="contact-info-title">Instagram</h5>
-                            <a href="https://instagram.com/igorsoglia.engenharia" target="_blank" class="contact-info-link">@igorsoglia.engenharia</a>
+                            <a href="https://www.instagram.com/igorsoglia.engenharia?igsh=NTd0Y3FieGI3MmFt&utm_source=qr" target="_blank" class="contact-info-link">@igorsoglia.engenharia</a>
                         </div>
                     </div>
                 </div>
@@ -153,7 +153,7 @@ include 'partials/header.php';
 
 
     <!-- Botão flutuante do Instagram -->
-    <a href="https://instagram.com/igorsoglia.engenharia" target="_blank" rel="noopener" aria-label="Siga-nos no Instagram" class="instagram-float">
+    <a href="https://www.instagram.com/igorsoglia.engenharia?igsh=NTd0Y3FieGI3MmFt&utm_source=qr" target="_blank" rel="noopener" aria-label="Siga-nos no Instagram" class="instagram-float">
         <i class="fab fa-instagram"></i>
     </a>
 

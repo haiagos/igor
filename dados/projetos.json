@@ -1,0 +1,89 @@
+{
+    "residenciais": [
+        {
+            "imagem": "RESIDENCIAL2.jpeg",
+            "titulo": "Residência Contemporânea",
+            "descricao": "Um projeto que combina elegância e funcionalidade, com espaços amplos e integrados à natureza."
+        },
+        {
+            "imagem": "RESIDENCIA1.jpeg",
+            "titulo": "Casa Moderna",
+            "descricao": "Design inovador que maximiza o aproveitamento de luz natural e ventilação."
+        }
+    ],
+    "interiores": [
+        {
+            "imagem": "interior2.jpeg",
+            "titulo": "Living Contemporâneo",
+            "descricao": "Ambientes que combinam conforto e sofisticação."
+        },
+        {
+            "imagem": "interior4.jpeg",
+            "titulo": "Cozinha Gourmet",
+            "descricao": "Espaços funcionais com acabamentos premium."
+        },
+        {
+            "imagem": "interio3.jpeg",
+            "titulo": "Suíte Master",
+            "descricao": "Conforto e elegância em cada detalhe."
+        }
+    ],
+    "minimalistas": [
+        {
+            "imagem": "RESIDENCIAL 3.jpeg",
+            "titulo": "Design Minimalista",
+            "descricao": "Nossos projetos minimalistas são a expressão máxima do \"menos é mais\". Criamos ambientes limpos e sofisticados, onde cada elemento tem seu propósito. A simplicidade encontra a elegância em cada detalhe cuidadosamente planejado."
+        }
+    ],
+    "modernos": [
+        {
+            "imagem": "moderno2.jpeg",
+            "titulo": "Residência Moderna",
+            "descricao": "Uma fusão perfeita entre tecnologia e design contemporâneo."
+        },
+        {
+            "imagem": "galeria10.jpeg",
+            "titulo": "Detalhes Modernos",
+            "descricao": "Inovação em cada acabamento."
+        },
+        {
+            "imagem": "galeria3.jpeg",
+            "titulo": "Espaços Integrados",
+            "descricao": "Fluidez e funcionalidade."
+        }
+    ],
+    "galeria": [
+        {
+            "src": "galeria1.jpeg",
+            "alt": "Projeto 1"
+        },
+        {
+            "src": "galeria2.jpeg",
+            "alt": "Projeto 2"
+        },
+        {
+            "src": "galeria5.jpeg",
+            "alt": "Projeto 3"
+        },
+        {
+            "src": "galeria6.jpeg",
+            "alt": "Projeto 4"
+        },
+        {
+            "src": "galeria7 (2).jpeg",
+            "alt": "Projeto 5"
+        },
+        {
+            "src": "galeria7.jpeg",
+            "alt": "Projeto 6"
+        },
+        {
+            "src": "galeria12.jpeg",
+            "alt": "Projeto 7"
+        },
+        {
+            "src": "galeria13.jpeg",
+            "alt": "Projeto 8"
+        }
+    ]
+}

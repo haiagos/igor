@@ -5,7 +5,7 @@
                     <h3>Igor Soglia</h3>
                     <p>Engenheiro Civil especializado em arquitetura e design de interiores.</p>
                     <div class="footer-social">
-                        <a href="https://instagram.com/igorsoglia.engenharia" target="_blank" aria-label="Instagram">
+                        <a href="https://www.instagram.com/igorsoglia.engenharia?igsh=NTd0Y3FieGI3MmFt&utm_source=qr" target="_blank" aria-label="Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
                         <a href="https://wa.me/5511995478832" target="_blank" aria-label="WhatsApp">
