@@ -13,14 +13,9 @@
   overflow: hidden;
   margin-bottom: 2rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
   height: 100%; /* Ensure cards have consistent height */
   display: flex;
   flex-direction: column;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
 }
 
 .project-card img {
@@ -90,11 +85,6 @@
   height: 100%;
   object-fit: cover;
   cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.gallery-img:hover {
-  transform: scale(1.05);
 }
 
 .modal-content {

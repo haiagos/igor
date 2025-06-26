@@ -1,21 +1,11 @@
 .gallery-img {
-    transition: transform 0.3s ease;
     cursor: pointer;
-}
-
-.gallery-img:hover {
-    transform: scale(1.05);
 }
 
 .project-card {
     position: relative;
     overflow: hidden;
     margin-bottom: 2rem;
-    transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
 }
 
 .project-info {

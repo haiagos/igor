@@ -15,6 +15,11 @@
     .project-section {
         position: relative;
         overflow: hidden;
+        transition: all 0.3s ease;
+    }
+    
+    .project-section:hover {
+        transform: translateY(-5px);
     }
     
     .style-card {
@@ -31,6 +36,11 @@
     
     .style-image {
         border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+    
+    .style-image:hover {
+        transform: scale(1.02);
     }
     
     .feature-list li {

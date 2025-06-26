@@ -466,13 +466,10 @@ section.about-section2 {
     height: 100px;
     object-fit: cover;
     border: 2px solid transparent;
-    transition: transform 0.3s, border-color 0.3s;
     cursor: pointer;
 }
 .gallery-thumb:hover {
-    transform: scale(1.1);
     border-color: var(--goldenrod);
-    z-index: 1;
 }
 
 /* Thumbnail quadrado para galeria */
@@ -482,13 +479,10 @@ section.about-section2 {
     object-fit: cover;
     display: block;
     border: 2px solid transparent;
-    transition: transform 0.3s, border-color 0.3s;
     cursor: pointer;
 }
 .gallery-thumb-square:hover {
-    transform: scale(1.05);
     border-color: var(--goldenrod);
-    z-index: 1;
 }
 
 /* Hover yellow border on gallery images */
